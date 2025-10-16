@@ -2,100 +2,53 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Calculadora Básica</title>
-  <style>
-    body {
-      background: #f0f4f8;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-    }
-    .calculadora {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px black;
-      width:260px;
-    }
-    #display {
-      width: 100%;
-      height: 50px;
-      text-align: right;
-      font-size: 1.5em;
-      margin-bottom: 10px;
-      padding: 5px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    .botones {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-    }
-    button {
-      padding: 15px;
-      font-size: 1.2em;
-      border: none;
-      background: #e2e8f0;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    button:hover { 
-    background: #cbd5e1; }
-    .igual { 
-    background: #38bdf8; color: white; }
-    .igual:hover { 
-    background: cadetblue; }
-    .limpiar { 
-    background: red; color: white; }
-    .limpiar:hover { 
-    background: orchid; }
-
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="calculadora">
-    <input type="text" id="display" readonly>
-    <div class="botones">
-      <button onclick="agregar('7')">7</button>
-      <button onclick="agregar('8')">8</button>
-      <button onclick="agregar('9')">9</button>
-      <button onclick="agregar('/')">÷</button>
 
-      <button onclick="agregar('4')">4</button>
-      <button onclick="agregar('5')">5</button>
-      <button onclick="agregar('6')">6</button>
-      <button onclick="agregar('*')">×</button>
+  <div class="container my-5">
+    <div class="row">
+      <!-- Columna Izquierda -->
+      <div class="col-md-4 text-center">
+        <img src="https://via.placeholder.com/150" alt="Foto perfil" class="img-fluid rounded-circle mb-3">
+        <h2>Mi Nombre</h2>
+        <p class="text-muted">Descripción breve aquí</p>
 
-      <button onclick="agregar('1')">1</button>
-      <button onclick="agregar('2')">2</button>
-      <button onclick="agregar('3')">3</button>
-      <button onclick="agregar('-')">−</button>
+        <h4>Trabajos</h4>
+        <ul class="list-unstyled">
+          <li><a href="trabajos/trabajo1.html">Trabajo 1 - CSS</a></li>
+          <li><a href="trabajos/trabajo2.html">Trabajo 2 - Calculadora</a></li>
+        </ul>
+      </div>
 
-      <button onclick="agregar('0')">0</button>
-      <button onclick="agregar('.')">.</button>
-      <button class="igual" onclick="calcular()">=</button>
-      <button onclick="agregar('+')">+</button>
+      <!-- Columna Derecha -->
+      <div class="col-md-8">
+        <h3>Ejercicios</h3>
 
-      <button class="limpiar" onclick="limpiar()">AC</button>
+        <h5>CSS</h5>
+        <ul>
+          <li><a href="ejercicios/css/ejer1.html">Ejercicio 01</a></li>
+          <li><a href="ejercicios/css/ejer2.html">Ejercicio 02</a></li>
+        </ul>
 
+        <h5>HTML</h5>
+        <ul>
+          <li><a href="ejercicios/html/ejer1.html">Ejercicio 01</a></li>
+          <li><a href="ejercicios/html/ejer2.html">Ejercicio 02</a></li>
+        </ul>
+
+        <h5>JavaScript</h5>
+        <ul>
+          <li><a href="ejercicios/js/ejer1.html">Ejercicio 01</a></li>
+          <li><a href="ejercicios/js/ejer2.html">Ejercicio 02</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 
-  <script>
-    function agregar(valor) {
-      document.querySelector('#display').value += valor;
-    }
-
-    function limpiar() {
-      document.querySelector('#display').value = '';
-    }
-
-    function calcular() {
-      document.querySelector('#display').value = eval(document.querySelector('#display').value);
-    }
-  </script>
 </body>
 </html>
+
